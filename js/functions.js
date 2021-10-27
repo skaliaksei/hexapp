@@ -18,7 +18,7 @@ function deleteCountry(enteredCountryName) {
 //Узнать столицу
 function getCountryInfo(enteredCountryName) {
     if (enteredCountryName in countries) {
-        console.log(`${countries[enteredCountryName]} is a capital of ${enteredCountryName}`);
+        console.log(`Country: ${enteredCountryName}, Capital: ${countries[enteredCountryName]}`);
     } else {
         console.log(`${enteredCountryName}?! Xm.. There isn't entered country :/`);
     }
@@ -27,6 +27,6 @@ function getCountryInfo(enteredCountryName) {
 // Вывести весь список стран
 function coutryiesList() {
     for(let i in countries) {
-        console.log(`Country: ${i}, Capital: ${countries[i]}`)
-      }
+        getCountryInfo(i);
+    }
 }
